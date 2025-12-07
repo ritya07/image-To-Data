@@ -1,0 +1,19 @@
+<div class="image-to-data-container">
+  <h2>Image to Data Conversion</h2>
+
+  <mat-card>
+    <mat-card-content>
+      <input type="file" (change)="onFileSelected($event)" accept="image/*">
+      <button mat-raised-button color="primary" (click)="convertToTable()">Convert to Table</button>
+    </mat-card-content>
+  </mat-card>
+
+  <div *ngIf="loading" class="loading-spinner">
+    <mat-spinner></mat-spinner>
+    <p>Converting image to data...</p>
+  </div>
+
+  <div *ngIf="errorMessage" class="error-message">
+    <mat-error>{{ errorMessage }}</mat-error>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="product-details-container">
+  <mat-card *ngIf="product">
+    <mat-card-header>
+      <mat-card-title>{{ product.productName }}</mat-card-title>
+      <mat-card-subtitle>{{ product.category }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p><strong>Quantity:</strong> {{ product.quantity }}</p>
+      <p><strong>Price:</strong> {{ product.price | currency }}</p>
+      <p *ngIf="product.description"><strong>Description:</strong> {{ product.description }}</p>
+      <!-- Add other fields as needed from OCR output -->
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="accent" (click)="goBack()">Back to List</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card *ngIf="!product">
+    <mat-card-content>
+      <p>Product not found.</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="accent" (click)="goBack()">Back to List</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

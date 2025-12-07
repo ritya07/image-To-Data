@@ -1,0 +1,25 @@
+.product-details-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+mat-card {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+mat-card-header {
+  padding-bottom: 10px;
+}
+
+mat-card-content p {
+  margin-bottom: 8px;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+}
